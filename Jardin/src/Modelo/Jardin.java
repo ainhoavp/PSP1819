@@ -30,7 +30,7 @@ public class Jardin {
     }
     
     
-    public synchronized void IOPersona(boolean entra){
+    public void IOPersona(boolean entra){
         if(entra){
             contador++;
         }else{

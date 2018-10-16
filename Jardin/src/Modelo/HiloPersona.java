@@ -20,7 +20,7 @@ public class HiloPersona extends Thread{
     
         this.setName(nombreHilo);
         this.j = j;
-        entra = (int)(Math.random())*2==0?false:true;
+        entra = ((int)((Math.random())*2)==0)?false:true;
     }
 /*
     @Override
@@ -45,7 +45,11 @@ public class HiloPersona extends Thread{
     
     @Override
     public void run() {
-if(entra){
+
+    //synchronized evita que dos hilos accedan al metodo o lo que esté synchronized y hasta que no acaba el metodo synchronized no se desbloquea para
+    //el siguiente hilo.
+        synchronized(j){
+            if(entra){
     System.out.println(Thread.currentThread().getName()+" entra en el jardín.");
 }else{
     System.out.println(Thread.currentThread().getName()+ " sale del jardín.");
@@ -53,6 +57,7 @@ if(entra){
         
 j.IOPersona(entra);
         System.out.println("Hay "+j.getContador()+" personas en el jardín");
+        }
 
     }
     
