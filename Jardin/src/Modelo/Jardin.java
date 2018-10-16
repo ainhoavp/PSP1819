@@ -5,7 +5,7 @@ package Modelo;
  * @author Ainhoa
  */
 public class Jardin {
-    
+
     private int contador;
 
     public Jardin(int cont) {
@@ -19,23 +19,13 @@ public class Jardin {
     public void setContador(int contador) {
         this.contador = contador;
     }
-    
-    public void entrarPersona(){
-        contador++;
-    }
 
-
-    public void salirPersona(){
-        contador--;
-    }
-    
-    
-    public void IOPersona(boolean entra){
-        if(entra){
+    public void IOPersona(boolean entra) {
+        if (entra) {
             contador++;
-        }else{
+        } else {
             contador--;
         }
     }
-    
+
 }
