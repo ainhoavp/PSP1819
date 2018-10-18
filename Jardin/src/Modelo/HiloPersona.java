@@ -10,7 +10,6 @@ public class HiloPersona extends Thread {
     private boolean entra = false;
 
     public HiloPersona(String nombreHilo, Jardin j) {
-
         this.setName(nombreHilo);
         this.j = j;
         entra = ((int) ((Math.random()) * 2) == 0) ? false : true;
