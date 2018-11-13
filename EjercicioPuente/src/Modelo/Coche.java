@@ -1,19 +1,23 @@
 package Modelo;
 
+
 /**
  *
  * @author Ainhoa
  */
-public class Coche {
-    
-    private String nombre;
-    private String matricula;
-    private int sentido;
+public class Coche{
 
-    public Coche(String nombre, String matricula) {
+    private String nombre;
+    private boolean sentidoDerecha;
+
+    public Coche(String nombre) {
         this.nombre = nombre;
-        this.matricula = matricula;
-        this.sentido = (int)Math.random();
+       int intSentido = (int) (Math.random()*2);
+       if(intSentido == 1){
+           this.sentidoDerecha = false;
+    }else{
+           this.sentidoDerecha = true;
+       }
     }
 
     public String getNombre() {
@@ -24,18 +28,19 @@ public class Coche {
         this.nombre = nombre;
     }
 
-    public String getMatricula() {
-        return matricula;
+    public boolean isSentidoDerecha() {
+        return sentidoDerecha;
     }
 
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
+    public void setSentidoDerecha(boolean sentidoDerecha) {
+        this.sentidoDerecha = sentidoDerecha;
     }
+
 
     @Override
     public String toString() {
-        return "Coche{" + "nombre=" + nombre + ", matricula=" + matricula + ", sentido=" + sentido + '}';
+        return "Coche{" + "nombre=" + nombre + ", sentido=" + sentidoDerecha + '}';
     }
 
-    
+   
 }
