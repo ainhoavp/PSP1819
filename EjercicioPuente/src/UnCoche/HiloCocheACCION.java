@@ -1,4 +1,4 @@
-package Modelo;
+package UnCoche;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -7,10 +7,10 @@ import java.util.logging.Logger;
  *
  * @author Ainhoa
  */
-public class HiloCocheACCION extends Thread{
-    
-    Coche coche;
-    Puente puente;
+public class HiloCocheACCION extends Thread {
+
+    private Coche coche;
+    private Puente puente;
 
     public HiloCocheACCION(Coche coche, Puente puente) {
         this.coche = coche;
@@ -27,13 +27,5 @@ public class HiloCocheACCION extends Thread{
         }
         puente.salirPuente(coche);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

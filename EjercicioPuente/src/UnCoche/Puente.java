@@ -1,4 +1,4 @@
-package Modelo;
+package UnCoche;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -68,7 +68,7 @@ public class Puente {
            }
     
     public synchronized void mensajeCadena(Coche c){
-        cadenaCoches+=c.getNombre()+ ", ";
+        cadenaCoches+=c.getNombre()+" con sentido: "+c.getSentido()+", ";
         System.out.println(cadenaCoches);
     }
     
